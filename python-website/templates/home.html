@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Informatic Solution</title>
+
+    <link rel="stylesheet" href="{{url_for('static',filename='css/main.css')}}">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/navbarstyle.css')}}">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/servicesstyle.css')}}">
+
+
+</head>
+
+<body>
+    <!-- BANNER OFICIAL -->
+    <div class="navbar">
+        <div class="navbar-inner">
+            <div class="logo"><a href="index.html">Informatic Solution</a></div>
+            <ul class="nav-links">
+                <li><a href="http://127.0.0.1:5000/about">Sobre Mi</a></li>
+                <li><a href="http://127.0.0.1:5000/services">Servicios</a></li>
+                <li><a href="http://127.0.0.1:5000/blog">Blog</a></li>
+                <li><a href="http://127.0.0.1:5000/contact">Contacto</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <section class="hero">
+        <div class="container">
+            <h1>Bienvenido a Informatic Solution</h1>
+            <p>Brindamos soluciones tecnológicas innovadoras para tu negocio.</p>
+            <br>
+            <a href="http://127.0.0.1:5000/contact" class="cta-button">Contáctanos</a>
+        </div>
+    </section>
+
+    <section id="servicios" class="services">
+        <h1>Nuestros Servicios</h1>
+        <div class="container">
+            <!-- SERVICIOS -->
+            <div class="service">
+                <h2>Desarrollo de Software</h2>
+                <p>Creación de aplicaciones y soluciones informáticas a medida, utilizando las últimas tecnologías y
+                    mejores prácticas de desarrollo.</p>
+            </div>
+            <div class="service">
+                <h2>Consultoría en TI</h2>
+                <p>Asesoramiento en la implementación de tecnologías de la información para optimizar procesos y mejorar
+                    la eficiencia de la empresa.</p>
+            </div>
+            <div class="service">
+                <h2>Seguridad Informática</h2>
+                <p>Implementación de medidas de seguridad para proteger los sistemas, redes y datos sensibles de
+                    amenazas cibernéticas.</p>
+            </div>
+            <div class="service">
+                <h2>Desarrollo Web</h2>
+                <p>Creación y mantenimiento de sitios web y aplicaciones web atractivas, funcionales y compatibles con
+                    dispositivos móviles.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <script>
+        const navbar = document.querySelector(".navbar");
+        const navbarInner = document.querySelector(".navbar-inner");
+        let prevScrollPos = window.pageYOffset;
+
+        window.addEventListener("scroll", () => {
+            const currentScrollPos = window.pageYOffset;
+            if (prevScrollPos > currentScrollPos) {
+                navbar.classList.remove("scrolled");
+                navbarInner.style.opacity = "1";
+            } else {
+                navbar.classList.add("scrolled");
+                navbarInner.style.opacity = "0";
+            }
+            prevScrollPos = currentScrollPos;
+        });
+    </script>
+    <!-- animacion navbar -->
+
+
+</body>
+<footer class="footer">
+    
+    <p class="footer-text">© 2023 Todos los derechos reservados. | Dirección: Calle Principal 123, Ciudad | Email: info@tudominio.com</p>
+</footer>
+
+<script>
+    const footerText = document.querySelector(".footer-text");
+
+    window.addEventListener("scroll", () => {
+        const footerTop = footerText.getBoundingClientRect().top;
+        const windowHeight = window.innerHeight;
+
+        if (footerTop < windowHeight) {
+            footerText.style.opacity = "1";
+            footerText.style.transform = "translateY(0)";
+            footerText.style.transition = "opacity 0.5s, transform 0.5s";
+        }
+    });
+</script>
+</body>
+
+</html>

@@ -1,0 +1,386 @@
+body {
+    font-family: Arial, sans-serif;
+  }
+  
+ 
+  .hero {
+    background-image: url('https://blogs.ucontinental.edu.pe/wp-content/uploads/2022/06/shutterstock_1771836200-scaled-800x450.jpg'); /* Agrega una imagen de fondo */
+    background-size: cover;
+    background-position: center;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    padding: 40px 0;
+    font-size: 48px;
+    font-weight: bold;
+    color: #348034; /* Cambia el color según tu preferencia */
+   
+    text-shadow: 2px 2px 4px rgba(245, 245, 245, 0.2); /* Sombra del texto */}
+  
+  .section {
+    padding: 0px;
+    background-color: #618a52;
+    color: #ffffff;
+    padding: 25px 0;
+  }
+  
+ 
+
+  .navbar{
+    background-color: #639252;
+    color: #fffcfc;
+  }
+.logo{
+    width: 100px;
+}
+
+
+
+
+/* Estilo para las imágenes */
+
+/* Estilo para el video */
+video {
+  width: 100%;
+}
+
+/* Estilo para el pie del video */
+video::-webkit-media-controls-panel {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+}
+
+
+/*  CONTACTO */
+
+#contact {
+    background-color: #3c612e;
+
+  }
+  
+  #contact h2 {
+    color: #ffffff;
+  }
+  
+  #contact p {
+    color: #eeeeee;
+  }
+  
+  .contact-form {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #639252;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(248, 248, 248, 0.1);
+  }
+  
+  .contact-form h3 {
+    margin-bottom: 20px;
+  }
+  
+  .contact-form input,
+  .contact-form textarea {
+    width: 100%;
+   
+    margin-bottom: 15px;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    text-align: center;
+  }
+  
+  .contact-form button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+   
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .contact-form button:hover {
+    background-color: #0056b3;
+  }
+  .container{
+    text-align: center;
+    border-radius: 30px;
+
+  }
+
+  .carousel-image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.container {
+  max-width: 800px;
+}
+
+.carousel-inner img {
+
+  height: 400px;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  width: 40px;
+  height: 40px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: #fff;
+  width: 20px;
+  height: 20px;
+}
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+#about {
+  background-color: #dfe2e4;
+  padding: 20px 0;
+}
+
+#about .container {
+  text-align: center;
+  border-radius: 30px;
+  border-color: #000000;
+}
+
+#about h2 {
+  color: #0a0505;
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+#about p {
+  color: #000000;
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+/* Agregar sombra al contenedor */
+#about .container {
+  box-shadow: 0 0 100px rgba(0, 0, 0, 0.1);
+  border-radius: 50px;
+  padding: 20px;
+}
+
+/* Alinear el texto en el centro en pantallas pequeñas */
+@media (max-width: 767px) {
+  #about p {
+    text-align: center;
+  }
+}
+
+/* Estilo moderno para la sección "Servicios" */
+#services {
+  background-color: #ffffff;
+  padding: 80px 0;
+}
+
+#services .container {
+  text-align: center;
+}
+
+#services h2 {
+  color: #333;
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+#services p {
+  color: #777;
+  font-size: 1.2rem;
+  line-height: 1.6;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Agregar sombra al contenedor */
+#services .container {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  padding: 20px;
+}
+
+/* Estilo para la lista de servicios */
+.service-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 30px;
+}
+
+.service-list li {
+  margin-bottom: 15px;
+  position: relative;
+}
+
+.service-list li::before {
+  content: "\2022";
+  color: #007bff;
+  font-size: 1.5rem;
+  position: absolute;
+  left: -20px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+
+/* Estilo moderno para la sección de "Contacto" */
+#contact {
+  background-color: #60aa59;
+  padding: 20px 0;
+}
+
+#contact .container {
+  text-align: center;
+  background-color: #4f8648;
+}
+
+#contact h1 {
+  color: #ffffff;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+#contact p {
+  color: #ffffff;
+  font-size: 1.2rem;
+  line-height: 1.6;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+#contact h2 {
+  color: #000000;
+  font-size: 2rem;
+  margin-top: 40px;
+}
+
+#contact strong {
+  color: #000000;
+}
+
+/* Agregar sombra al contenedor */
+#contact .container {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  padding: 20px;
+}
+
+/* Ajustar estilos para pantallas pequeñas */
+@media (max-width: 767px) {
+  #contact h1 {
+    font-size: 2rem;
+  }
+
+  #contact h2 {
+    font-size: 1.5rem;
+  }
+}
+/* Estilo moderno para la sección de servicios */
+.services {
+  background-color: #f8f9fa;
+  padding: 80px 0;
+  text-align: center;
+}
+
+.services h1 {
+  color: #333;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.services .container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.service {
+  flex: 1;
+  padding: 20px;
+  margin: 15px;
+  background-color: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.service h2 {
+  color: #555;
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+
+.service p {
+  color: #777;
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+/* Ajustar estilos para pantallas pequeñas */
+@media (max-width: 767px) {
+  .services h1 {
+    font-size: 2rem;
+  }
+
+  .service h2 {
+    font-size: 1.5rem;
+  }
+
+  .service p {
+    font-size: 1rem;
+  }
+}
+
+
+/* Estilo moderno para la sección de "Imágenes y Videos" */
+#media {
+  background-color: #639252;
+  padding: 80px 0;
+  text-align: center;
+}
+
+#media h2 {
+  color: #f8f3f3;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+#media .container {
+  max-width: 1200px;
+}
+
+#media .row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 40px;
+}
+
+#media .col-md-6 {
+  flex-basis: calc(50% - 10px);
+  margin-bottom: 20px;
+}
+
+#media .img-fluid {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#media iframe {
+  width: 100%;
+  height: 0;
+  padding-bottom: 56.25%; /* Proporción de aspecto para videos 16:9 */
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}

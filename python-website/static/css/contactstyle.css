@@ -1,0 +1,123 @@
+/* Estilos de sección de contacto */
+
+body {
+  background-image: url('https://www.stjohns.edu/sites/default/files/styles/640w/public/2022-02/istock-1177116437.jpg?itok=VWiqh87m');
+  background-size: cover; /* Ajusta la imagen al tamaño del contenedor */
+  background-repeat: no-repeat; /* Evita que la imagen se repita */
+}
+.contact {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 50px 20px;
+  opacity: 0;
+  transform: translateY(50px);
+  animation: fadeInUp 1s forwards, slideUp 1s 0.5s forwards;
+  color: #ccc;
+}
+
+@keyframes fadeInUp {
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  to {
+      transform: translateY(0);
+  }
+}
+
+.contact-info {
+  flex: 1;
+  padding: 20px;
+  background-color: #063386;
+  box-shadow: 0px 4px 10px rgb(5, 4, 4);
+  text-align: center;
+  animation: fadeIn 1s forwards;
+}
+
+@keyframes fadeIn {
+  to {
+      opacity: 1;
+  }
+}
+
+.contact-info h2 {
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+}
+
+.contact-info p {
+  margin-bottom: 10px;
+}
+
+.contact-form {
+  flex: 1;
+  padding: 20px;
+  background-color:#063386;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  animation: slideIn 1s forwards;
+}
+
+@keyframes slideIn {
+  to {
+      transform: translateY(0);
+  }
+}
+
+.contact-form h2 {
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+}
+
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-form input,
+.contact-form textarea {
+  margin-bottom: 20px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 40px;
+}
+
+.contact-form button {
+  align-self: flex-start;
+  padding: 10px 20px;
+  background-color: #000000;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.contact-form button:hover {
+  background-color: #000000;
+  transform: scale(1.05);
+}
+/* Estilos boton */
+
+
+.back-to-home {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  padding: 10px 20px;
+  background-color: #000000;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, opacity 0.3s;
+}
+
+.back-to-home:hover {
+  background-color: #000000;
+}

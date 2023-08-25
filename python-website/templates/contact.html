@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto</title>
+    <link rel="stylesheet" href="estilos.css"> <!-- Agrega aquí la ruta correcta a tu hoja de estilos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/contactstyle.css')}}">
+
+</head>
+
+<body>
+  <button class="back-to-home" id="backToHome">
+    <i class="fas fa-arrow-left"></i> Volver al Inicio
+</button>
+
+  <section class="contact">
+    <div class="contact-info">
+        <h2>Información de Contacto</h2>
+        <p><i class="fas fa-map-marker-alt"></i> Dirección: Calle Principal 123, Ciudad</p>
+        <p><i class="fas fa-envelope"></i> Email: info@tudominio.com</p>
+        <p><i class="fas fa-phone"></i> Teléfono: +123 456 7890</p>
+    </div>
+    <div class="contact-form">
+        <h2>Contáctanos</h2>
+        <form id="contactForm">
+            <input type="text" name="nombre" placeholder="Nombre" required>
+            <input type="email" name="email" placeholder="Email" required>
+            <textarea name="mensaje" placeholder="Mensaje" required></textarea>
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
+</section>
+<script>document.addEventListener("DOMContentLoaded", function () {
+  const backToHomeButton = document.getElementById("backToHome");
+
+  window.addEventListener("scroll", () => {
+      const yOffset = window.pageYOffset;
+      if (yOffset > 200) {
+          backToHomeButton.style.opacity = "1";
+          backToHomeButton.style.visibility = "visible";
+      } else {
+         
+          backToHomeButton.style.opacity = "0";
+          backToHomeButton.style.visibility = "hidden";
+      }
+  });
+
+  backToHomeButton.addEventListener("click", () => {
+      window.location.href = "http://127.0.0.1:5000/";
+  });
+});</script>
+</body>
+
+</html>

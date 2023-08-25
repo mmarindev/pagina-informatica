@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>About</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='css/styles.css')}}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+
+</head>
+
+<body>
+  <button class="back-to-home" id="backToHome">
+        <i class="fas fa-arrow-left"></i> Volver al Inicio
+    </button>
+    
+
+    <section class="hero">
+        <div class="container">
+            <h1 class="animate-fadeInDown">Bienvenido a Informatic Solution</h1>
+            <p class="animate-fadeInUp">Brindamos soluciones tecnológicas innovadoras para tu negocio.</p>
+            <a href="#contacto" class="cta-button animate-fadeInUp">Contáctanos</a>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h2 class="animate-fadeInDown">Sobre Nosotros</h2>
+                    <p class="animate-fadeInUp">En Informatic Solution, somos una empresa dedicada a proporcionar soluciones
+                        tecnológicas innovadoras para empresas de todas las industrias. Nuestro equipo de profesionales
+                        altamente capacitados se especializa en el desarrollo de software personalizado, consultoría en
+                        tecnologías de la información y seguridad informática.</p>
+                    <p class="animate-fadeInUp">Nuestra misión es ayudarte a aprovechar al máximo la tecnología para
+                        mejorar la eficiencia de tus operaciones, aumentar la productividad y lograr tus objetivos
+                        comerciales. Ya sea que necesites una aplicación web avanzada, asesoramiento en estrategias
+                        tecnológicas o protección contra amenazas cibernéticas, estamos aquí para brindarte soluciones
+                        efectivas y orientadas al resultado.</p>
+                </div>
+                <div class="col-md-6">
+                    <img src="https://mir-s3-cdn-cf.behance.net/projects/404/ae1ae7166150029.Y3JvcCwyMzU3LDE4NDQsMzAzLDA.jpg"
+                        alt="Imagen Sobre Nosotros" class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </section>
+    <script>document.addEventListener("DOMContentLoaded", function () {
+        const backToHomeButton = document.getElementById("backToHome");
+    
+        window.addEventListener("scroll", () => {
+            const yOffset = window.pageYOffset;
+            if (yOffset > 200) {
+                backToHomeButton.style.opacity = "1";
+                backToHomeButton.style.visibility = "visible";
+            } else {
+               
+                backToHomeButton.style.opacity = "0";
+                backToHomeButton.style.visibility = "hidden";
+            }
+        });
+    
+        backToHomeButton.addEventListener("click", () => {
+            window.location.href = "http://127.0.0.1:5000/";
+        });
+    });</script>
+
+
+</body>
+
+</html>

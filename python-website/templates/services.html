@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servicios Informáticos</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Estilos generales */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #031a46;
+        }
+
+        a {
+            color: #ffffff;
+            text-decoration: none;
+        }
+
+        header {
+            background-color: #0f3c8f;
+            color: #ffffff;
+            text-align: center;
+            padding: 2em;
+        }
+
+        .services-container {
+            display: flex;
+            justify-content: space-around;
+            align-items: stretch;
+            flex-wrap: wrap;
+            padding: 2em;
+        }
+
+        .service {
+            flex: 1;
+            text-align: center;
+            padding: 2em;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.5s, transform 0.5s;
+            margin: 1em;
+        }
+
+        /* Estilos para la animación de desplazamiento suave */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Estilos y animaciones específicas */
+        .service h2 {
+            font-size: 1.8em;
+            margin-bottom: 0.5em;
+            color: #333;
+        }
+
+        .service p {
+            font-size: 1.1em;
+            color: #666666;
+            margin-bottom: 1.5em;
+        }
+
+        /* Animación de entrada */
+        .service {
+            animation: fadeUp 1s ease-out both;
+        }
+
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Estilos botón */
+
+        .back-to-home {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            padding: 10px 20px;
+            background-color: #000000;
+            color: #ffffff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s, opacity 0.3s;
+            z-index: 999;
+            opacity: 1; /* Añadida para hacer el botón visible desde un principio */
+            visibility: visible; /* Añadida para hacer el botón visible desde un principio */
+        }
+
+        .back-to-home:hover {
+            background-color: #333333;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <h1>Servicios Informáticos</h1>
+    <nav>
+        <a href="#servicio1">Desarrollo Web</a> |
+        <a href="#servicio2">Seguridad Informática</a> |
+        <a href="#servicio3">Analítica de Datos</a>
+    </nav>
+</header>
+<button class="back-to-home" id="backToHome">
+    <i class="fas fa-arrow-left"></i> Volver al Inicio
+</button>
+<div class="services-container">
+    <div class="service" id="servicio1">
+        <h2>Desarrollo Web</h2>
+        <p>Ofrecemos soluciones de desarrollo web personalizadas para adaptarse a tus necesidades.</p>
+    </div>
+    <div class="service" id="servicio2">
+        <h2>Seguridad Informática</h2>
+        <p>Protege tus activos digitales con nuestras soluciones de seguridad informática.</p>
+    </div>
+    <div class="service" id="servicio3">
+        <h2>Analítica de Datos</h2>
+        <p>Ayudamos a desbloquear información valiosa a partir de tus datos.</p>
+    </div>
+</div>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const backToHomeButton = document.getElementById("backToHome");
+
+        window.addEventListener("scroll", () => {
+            const yOffset = window.pageYOffset;
+            if (yOffset > 200) {
+                backToHomeButton.style.opacity = "1";
+            } else {
+                backToHomeButton.style.opacity = "0";
+            }
+        });
+
+        backToHomeButton.addEventListener("click", () => {
+            window.location.href = "http://127.0.0.1:5000/";
+        });
+    });
+</script>
+</body>
+</html>
